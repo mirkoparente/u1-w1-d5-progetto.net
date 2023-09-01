@@ -38,6 +38,7 @@ namespace u1_w1_d5_progetto.net
             Console.WriteLine("Premi 3 per  uscire");
             Console.WriteLine("#################################################################");
             Console.WriteLine("");
+            Console.Write("Scelta:");
 
 
 
@@ -54,6 +55,11 @@ namespace u1_w1_d5_progetto.net
             else if (scelta == 3)
             {
                 Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("Scelta non valida");
+                Menu();
             }
         }
 
@@ -82,13 +88,10 @@ namespace u1_w1_d5_progetto.net
                 Console.Write("Reddito annuale: ");
                 double redditoAnnuale = double.Parse(Console.ReadLine());
 
+                Contribuente contr = new Contribuente(nome, cognome, dataNascita, cf, sesso, comuneRes, redditoAnnuale);
 
                 if (nome != "" || cognome != "" || cf != "" || comuneRes != "")
                 {
-
-
-                    Contribuente contr = new Contribuente(nome, cognome, dataNascita, cf, sesso, comuneRes, redditoAnnuale);
-
 
 
                     TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
