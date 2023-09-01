@@ -90,7 +90,7 @@ namespace u1_w1_d5_progetto.net
 
                 Contribuente contr = new Contribuente(nome, cognome, dataNascita, cf, sesso, comuneRes, redditoAnnuale);
 
-                if (nome != "" || cognome != "" || cf != "" || comuneRes != "")
+                if (nome != "" && cognome != "" && cf != "" && comuneRes != "")
                 {
 
 
